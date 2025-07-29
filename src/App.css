@@ -1,0 +1,119 @@
+/* App.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f6f0f0;
+  color: #3a1b1b;
+}
+
+/* Wrapper */
+.app {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  background: linear-gradient(135deg, #800707, #b52626);
+  color: white;
+  padding: 5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(128,7,7,0.6);
+  margin-bottom: 3rem;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 3.8rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-top: 0.8rem;
+  font-weight: 500;
+}
+
+/* Section Headings */
+section {
+  margin-top: 3rem;
+}
+
+section h2 {
+  color: #6f0a0a;
+  font-size: 2.2rem;
+  margin-bottom: 1.2rem;
+  border-bottom: 3px solid #800707;
+  display: inline-block;
+  padding-bottom: 0.2rem;
+}
+
+/* About section */
+.about p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #4a1a1a;
+}
+
+/* Projects grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 1.8rem;
+}
+
+.project-card {
+  background: linear-gradient(145deg, #800707, #a03030);
+  color: #fff;
+  padding: 1.8rem 1.6rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(128,7,7,0.7);
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 180px;
+}
+
+.project-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.project-card p {
+  flex-grow: 1;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #f0dada;
+}
+
+.project-card:hover,
+.project-card:focus {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(163,31,31,0.9);
+  outline: none;
+}
+
+/* Contact section */
+.contact p {
+  font-size: 1.15rem;
+  color: #4a1a1a;
+}
+
+.contact a {
+  color: #800707;
+  text-decoration: underline;
+}
+
+.contact a:hover,
+.contact a
+:focus {
+  color: #a03030;
+  text-decoration: none;
+}
