@@ -1,60 +1,112 @@
 // App.js
 import './App.css';
 
+import closetImg from './assets/closet.jpg';
+import creativesImg from './assets/creatives.jpg';
+import latitudeImg from './assets/latitude.jpg';
+
 function App() {
   const projects = [
+   {
+    title: "Closet Culture",
+    description: "Kenyan online fashion marketplace and platform that allows users to buy and sell pre-loved and new clothing, accessories, shoes, and bags.",
+    link: "https://closetculture.co.ke/",
+    image: closetImg
+  },
     {
-      title: "Project One",
-      description: "A brief summary of this project, technologies used, and its impact.",
-      link: "#"
+      title: "Creatives Connect",
+      description: "A networking and collaboration platform for creatives. It supports artists, designers, and other creators by offering community-driven opportunities to connect, collaborate, and showcase work.",
+      link: "https://creativesconnect.co.ke/",
+      image: creativesImg
     },
     {
-      title: "Project Two",
-      description: "Description highlighting key features and your contributions.",
-      link: "#"
+      title: "Latitude Limited",
+      description: "Growth marketing agency focused on leveraging AI and Gen‑Z digital fluency to help Kenyan tech startups, satellite innovators, and associations scale. ",
+      link: "https://latitude.co.ke/",
+      image: latitudeImg
     },
-    {
-      title: "Project Three",
-      description: "Overview of project purpose, challenges overcome, and outcome.",
-      link: "#"
-    },
-    {
-      title: "Project Four",
-      description: "Summary of project achievements and technologies involved.",
-      link: "#"
-    }
+    
   ];
 
+  // ...existing code...
   return (
     <div className="app">
       <header className="hero">
-        <h1>Marlene Wamalwa</h1>
-        <p>Tech Support & Web Developer</p>
+        <nav className="navbar">
+          <ul>
+            <li><a href="#about">About</a></li>
+           <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div className="hero-content">
+          <h1>Marlene Wamalwa</h1>
+          <p>Web Developer</p>
+           <a href="/resume.pdf" download className="download-cv-btn">Download CV</a>
+        </div>
       </header>
+      
 
-      <section className="about">
+      <section id="about" className="about">
         <h2>About Me</h2>
         <p>
-          Passionate about leveraging technology to solve problems and enhance user experiences. Experienced in web development and IT support, with strong skills in troubleshooting, communication, and creating responsive web applications.
-        </p>
+          I’m a web developer focused on building responsive, user-first websites with modern tools like React, PHP, and MySQL. I bring two years of experience in tech support at a fintech, where I honed my problem-solving and debugging skills. My past projects include live platforms with features like chat, user profiles, and admin dashboards. I’m open to freelance gigs and collaborations        </p>
       </section>
 
-      <section className="projects">
+<section id="skills" className="skills">
+  <h2>Skills</h2>
+  <div className="skills-list">
+    <div className="skill-circle">HTML</div>
+    <div className="skill-circle">CSS</div>
+    <div className="skill-circle">PHP</div>
+    <div className="skill-circle">MySQL</div>
+    <div className="skill-circle">REACT</div>
+    <div className="skill-circle">JS</div>
+    {/* Add more as needed */}
+  </div>
+</section>
+
+      <section id="projects" className="projects">
         <h2>Projects</h2>
         <div className="projects-grid">
-          {projects.map(({ title, description, link }, index) => (
-            <a href={link} className="project-card" key={index} target="_blank" rel="noopener noreferrer">
-              <h3>{title}</h3>
-              <p>{description}</p>
-            </a>
-          ))}
-        </div>
+  {projects.map(({ title, description, link, image }, index) => (
+    <a href={link} className="project-card" key={index} target="_blank" rel="noopener noreferrer">
+      <img src={image} alt={title} className="project-image" />
+      <h3>{title}</h3>
+      <p>{description}</p>
+    </a>
+  ))}
+</div>
       </section>
 
-      <section className="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-      </section>
+     <section  className="contact" id="contact">
+  <h2>Let's Work Together</h2>
+  <form
+    action="https://formspree.io/f/xvgqqbej"
+    method="POST"
+    className="contact-form"
+  >
+    <label>
+      Name:
+      <input type="text" name="name" required />
+    </label>
+    <label>
+      Email:
+      <input type="email" name="email" required />
+    </label>
+    <label>
+      Message:
+      <textarea name="message" rows="5" required />
+    </label>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<footer className="footer">
+  <p>&copy; {new Date().getFullYear()} Marlene Wamalwa. All rights reserved.</p>
+</footer>
+
     </div>
   );
 }
