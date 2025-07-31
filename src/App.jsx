@@ -30,7 +30,7 @@ function App() {
 
   // ...existing code...
   return (
-    <div className="app">
+    <div className="app" data-aos="fade-up">
       <header className="hero">
         <nav className="navbar">
           <ul>
@@ -48,13 +48,13 @@ function App() {
       </header>
       
 
-      <section id="about" className="about">
+      <section id="about" className="about" data-aos="fade-up">
         <h2>About Me</h2>
         <p>
           I’m a web developer focused on building responsive, user-first websites with modern tools like React, PHP, and MySQL. I bring two years of experience in tech support at a fintech, where I honed my problem-solving and debugging skills. My past projects include live platforms with features like chat, user profiles, and admin dashboards. I’m open to freelance gigs and collaborations        </p>
       </section>
 
-<section id="skills" className="skills">
+<section id="skills" className="skills" data-aos="fade-up">
   <h2>Skills</h2>
   <div className="skills-list">
     <div className="skill-circle">HTML</div>
@@ -67,7 +67,7 @@ function App() {
   </div>
 </section>
 
-      <section id="projects" className="projects">
+      <section id="projects" className="projects" >
         <h2>Projects</h2>
         <div className="projects-grid">
   {projects.map(({ title, description, link, image }, index) => (
@@ -80,7 +80,7 @@ function App() {
 </div>
       </section>
 
-     <section  className="contact" id="contact">
+     <section  className="contact" id="contact" >
   <h2>Let's Work Together</h2>
   <form
     action="https://formspree.io/f/xvgqqbej"
