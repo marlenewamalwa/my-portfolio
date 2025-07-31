@@ -261,3 +261,103 @@ section h2 {
   margin-top: 3rem;
   border-radius: 0 0 12px 12px;
 }
+
+/* Responsive styles for tablets and phones */
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    background: rgba(0, 0, 0, 0.6);
+    position: relative;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 1rem;
+  }
+
+  .hero-content {
+    margin-top: 1rem;
+  }
+
+  .download-cv-btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  section h2 {
+    font-size: 1.3rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .about p {
+    margin: 0 1.2rem;
+    font-size: 1rem;
+  }
+
+  .skills-list {
+    gap: 1rem;
+  }
+
+  .project-card {
+    margin-left: 0;
+    margin-right: 0;
+    height: auto;
+  }
+
+  .project-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-card p {
+    font-size: 0.95rem;
+  }
+
+  .contact-form {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .footer {
+    font-size: 0.95rem;
+    padding: 1rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-circle {
+    width: 60px;
+    height: 60px;
+    font-size: 0.9rem;
+  }
+
+  .download-cv-btn {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+  }
+
+  .contact-form button {
+    font-size: 0.95rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-card p {
+    font-size: 0.9rem;
+  }
+}
