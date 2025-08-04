@@ -4,6 +4,8 @@ import './App.css';
 import closetImg from './assets/closet.jpg';
 import creativesImg from './assets/creatives.jpg';
 import latitudeImg from './assets/latitude.jpg';
+import profileImg from './assets/newpassport.jpg';
+
 
 function App() {
   const projects = [
@@ -43,16 +45,25 @@ function App() {
         <div className="hero-content">
           <h1>Marlene Wamalwa</h1>
           <p>Web Developer</p>
-           <a href="/resume.pdf" download className="download-cv-btn">Download CV</a>
+           <a href="/CV.pdf" download className="download-cv-btn">Download CV</a>
         </div>
       </header>
       
 
-      <section id="about" className="about" data-aos="fade-up">
-        <h2>About Me</h2>
-        <p>
-          I’m a web developer focused on building responsive, user-first websites with modern tools like React, PHP, and MySQL. I bring two years of experience in tech support at a fintech, where I honed my problem-solving and debugging skills. My past projects include live platforms with features like chat, user profiles, and admin dashboards. I’m open to freelance gigs and collaborations        </p>
-      </section>
+  <section id="about" className="about" data-aos="fade-in">
+  <h2>About Me</h2>
+  <div className="about-content">
+    <div className="about-text">
+      <p>
+        I’m a web developer focused on building responsive, user-first websites with modern tools like React, PHP, and MySQL. I bring two years of experience in tech support at a fintech, where I honed my problem-solving and debugging skills. My past projects include live platforms with features like chat, user profiles, and admin dashboards. I’m open to freelance gigs and collaborations.
+      </p>
+    </div>
+    <div className="about-photo">
+      <img src={profileImg} alt="Marlene Wamalwa" />
+    </div>
+  </div>
+</section>
+
 
 <section id="skills" className="skills" data-aos="fade-up">
   <h2>Skills</h2>
